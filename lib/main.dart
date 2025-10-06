@@ -1744,17 +1744,18 @@ class _NFCScreenState extends State<NFCScreen> {
       if (!availability.success) {
         return NFCResult(success: false, message: availability.message);
       }
-
-      if (mrz.length != 3 ||
-          mrz.any((line) => line.isEmpty || line.length != 30)) {
+      //IDVNM2020154703034202015470<<6
+      //0202022M2702021VNM<<<<<<<<<<<
+      //DO<<LUONG<HUAN<<<<<<<<<<<<<<<<
+      if (mrz.length != 3
+      //||
+      // mrz.any((line) => line.isEmpty || line.length != 30)
+      ) {
         return NFCResult(success: false, message: 'MRZ không hợp lệ');
       }
 
       onProgress?.call(0.1, 'Đang phân tích MRZ...');
       final parsedMRZ = MRZParser.parse(mrz);
-      if (parsedMRZ == null) {
-        return NFCResult(success: false, message: 'MRZ không hợp lệ');
-      }
 
       final dbaKey = DBAKey(
         parsedMRZ.documentNumber,
