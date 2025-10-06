@@ -31,6 +31,9 @@ dependencies:
     flutter:
         sdk: flutter
     cccd_vietnam: ^2.0.0
+    flutter_nfc_kit: ^3.6.0
+    mrz_parser: ^2.0.1
+    image: ^4.1.5
     # flutter_platform_widgets: ^9.0.0
     flutter_platform_widgets: ^6.1.0
     intl: ^0.20.2
@@ -39,7 +42,9 @@ dependencies:
     # The following adds the Cupertino Icons font to your application.
     # Use with the CupertinoIcons class for iOS style icons.
     cupertino_icons: ^1.0.8
-    google_mlkit_text_recognition: ^0.5.0
+    # google_mlkit_text_recognition: ^0.5.0
+    google_mlkit_text_recognition: ^0.12.1
+    # google_mlkit_commons: ^0.11.0
     camera: ^0.11.1
 dev_dependencies:
     flutter_test:
